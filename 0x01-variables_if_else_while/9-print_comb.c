@@ -1,29 +1,24 @@
+/*
+ * File: 9-print_comb.c
+ * Auth: Brennan D Baraban
+ */
 #include <stdio.h>
-
 /**
- * main - Entry point of the program
+ * main - Prints all possible combinations of single-digit numbers.
  *
- * Description: Prints all possible combinations of single-digit numbers,
- * separated by ", ", in ascending order. Uses only the putchar function
- * four times.
- *
- * Return: (0) - Always 0 (success)
+ * Return: Always 0.
  */
 int main(void)
 {
-for (int digit1 = 0; digit1 <= 9; digit1++)
+int num;
+for (num = 0; num <= 9; num++)
 {
-for (int digit2 = digit1 + 1; digit2 <= 9; digit2++)
-{
-putchar(digit1 + '0');
-putchar(digit2 + '0');
-/* Check if it's the last combination, don't print ", " */
-if (!(digit1 == 8 && digit2 == 9))
-{
+putchar((num % 10) + '0');
+if (num == 9)
+continue;
 putchar(',');
 putchar(' ');
-}}
-}
+	}
 putchar('\n');
 return (0);
 }
