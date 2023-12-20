@@ -10,12 +10,12 @@
 int main(void)
 {
 int count = 50;
-long long first = 1, second = 2, next;
-printf("%lld, %lld", first, second);
+long first = 1, second = 2, next;
+printf("%ld,%ld", first, second);
 for (int i = 3; i <= count; i++)
 {
 next = first + second;
-printf(", %lld", next);
+printf(",%ld", next);
 first = second;
 second = next;
 }
