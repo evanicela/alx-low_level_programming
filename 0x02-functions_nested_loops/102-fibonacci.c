@@ -9,19 +9,15 @@
 
 int main(void)
 {
-unsigned long int first = 1;
-unsigned long int second = 2;
-unsigned long int next;
-int i;
-printf("%lu", first);
-for (i = 1; i < 50 ; i++)
+int count = 50;
+long long first = 1, second = 2, next;
+printf("%lld, %lld", first, second);
+for (int i = 3; i <= count; i++)
 {
-printf("%lu", second);
 next = first + second;
+printf(", %lld", next);
 first = second;
 second = next;
-if (i != 49)
-printf(",");
 }
 printf("\n");
 return (0);
