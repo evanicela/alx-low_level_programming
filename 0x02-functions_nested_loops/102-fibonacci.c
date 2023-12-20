@@ -13,7 +13,7 @@ unsigned long int first = 1;
 unsigned long int second = 2;
 unsigned long int next;
 int i;
-printf("%lu, ", first);
+printf("%lu", first);
 for (i = 1; i < 50 ; i++)
 {
 printf("%lu", second);
