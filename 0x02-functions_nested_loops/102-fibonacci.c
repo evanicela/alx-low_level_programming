@@ -1,23 +1,25 @@
 #include <stdio.h>
 
 /**
-* main main -program to find first 50 fibonnacci number
-* Return 0
+* main - Entry point of the program
+* Description: This program prints the first 50 Fibonacci numbers separated
+* by comma and space, starting with 1 and 2, followed by a new line.
+* Return: Always 0 (Success)
 */
 
 int main(void)
 {
-unsigned long int term1 = 1;
-unsigned long int term2 = 2;
+unsigned long int first = 1;
+unsigned long int second = 2;
 unsigned long int next;
 int i;
-printf("%lu, ", term1);
+printf("%lu, ", first);
 for (i = 1; i < 50 ; i++)
 {
-printf("%lu", term2);
-next = term1 + term2;
-term1 = term2;
-term2 = next;
+printf("%lu", second);
+next = first + second;
+first = second;
+second = next;
 if (i != 49)
 printf(",");
 }
